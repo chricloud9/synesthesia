@@ -1,0 +1,2 @@
+class SongMapController < ApplicationController
+end
