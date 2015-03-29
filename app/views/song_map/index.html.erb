@@ -44,7 +44,8 @@ div.vague { color: lightgrey; }
 </body>
 
 <script>
-
+  //Put in an incrementor for our frequency sample that we get back.
+  var incrementor = 0;
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35593052-1']);
   _gaq.push(['_trackPageview']);
@@ -203,7 +204,7 @@ function toggleOscillator() {
 }
 
 function toggleLiveInput() {
-    if (isPlaying) {
+    if (isPlaying) {n
         //stop playing and return
         sourceNode.stop( 0 );
         sourceNode = null;
@@ -265,6 +266,8 @@ var noteStrings = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "
 var colorStrings = ["red", "orange", "yellow", "green", "blue", "purple", "black", "gray", "brown", "#F562C3", "white", "#527126"];
 
 function noteFromPitch( frequency ) {
+  // Frequency in Hz
+  console.log(frequency);
   var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) );
   return Math.round( noteNum ) + 69;
 }
@@ -414,6 +417,11 @@ function updatePitch( time ) {
     noteElem.innerHTML = noteStrings[note%12];
     colorContainer = document.getElementById('colorContainer');
     colorContainer.style.backgroundColor = colorStrings[note%12];
+    incrementor++;
+     if (incrementor == 36) {
+      console.log(incrementor);
+      incrementor = 0;
+      };
 
     var detune = centsOffFromPitch( pitch, note );
     if (detune == 0 ) {
