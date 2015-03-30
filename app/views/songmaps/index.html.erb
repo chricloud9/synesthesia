@@ -96,6 +96,9 @@ var detectorElem,
   noteElem,
   detuneElem,
   detuneAmount;
+  var frequency_call_counter = 0; //count every time we update frequency
+  var frequency_hash = {}; //we will add an array to this hash
+  var pointInHash; //this will be the key for the array in the hash above
 
 window.onload = function() {
   audioContext = new AudioContext();
@@ -274,9 +277,13 @@ var noteStrings = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "
 var colorStrings = ["red", "orange", "yellow", "green", "blue", "purple", "black", "gray", "brown", "#F562C3", "white", "#527126"];
 
 function noteFromPitch( frequency ) {
+	frequency_call_counter ++;
 	frequencyArray.push(frequency);
 	if (frequencyArray.length >49){
 		console.log(frequencyArray);
+		pointInHash = frequency_call_counter / 50;
+		frequency_hash[pointInHash] = frequencyArray;
+		console.log(frequency_hash, pointInHash);
 		frequencyArray = [];
   	}
   // Frequency in Hz

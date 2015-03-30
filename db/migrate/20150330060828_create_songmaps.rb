@@ -1,5 +1,7 @@
 class CreateSongmaps < ActiveRecord::Migration
+enable_extension 'hstore' unless extension_enabled?('hstore') #enable the hstore value 
   def change
+  	enable_extension 'hstore' unless extension_enabled?('hstore'
     create_table :songmaps do |t|
   	  t.string 'name'
   	  t.hstore 'time_frequency' #add a hash with a time to frequency
