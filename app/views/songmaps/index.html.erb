@@ -17,7 +17,8 @@ div.vague { color: lightgrey; }
 #sharp { display: none; }
 .flat #flat { display: inline; }
 .sharp #sharp { display: inline; }
-#colorContainer{width:500px; height:500px;background-color: black}
+#colorContainer{width:50px; height:50px;background-color: black}
+#songMap{width:1000px; height:1000px; border: 2px solid black;}
 </style>
 
 </head>
@@ -29,6 +30,7 @@ div.vague { color: lightgrey; }
 <button onclick="toggleOscillator()">use oscillator</button>
 <!--<button onclick="updatePitch(0);">sample</button>-->
 
+
 <div id="detector" class="vague">
 <div class="pitch"><span id="pitch">--</span>Hz</div>
 <div class="note"><span id="note">--</span></div>   
@@ -36,6 +38,7 @@ div.vague { color: lightgrey; }
 <div id="detune"><span id="detune_amt">--</span><span id="flat">cents &#9837;</span><span id="sharp">cents &#9839;</span></div>
 </div>
 <div id="colorContainer"> </div>
+<div id="songMap"> </div>
 
 <!-- just used for debugging
 <canvas id="waveform" width="512" height="256"></canvas>
@@ -46,6 +49,7 @@ div.vague { color: lightgrey; }
   //Put in an incrementor for our frequency sample that we get back.
   var incrementor = 0;
   var frequencyArray = [];
+  var songTable = document.getElementById('songMap')
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35593052-1']);
   _gaq.push(['_trackPageview']);
@@ -274,21 +278,44 @@ var buflen = 1024;
 var buf = new Float32Array( buflen );
 
 var noteStrings = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
-var colorStrings = ["red", "orange", "yellow", "green", "blue", "purple", "black", "gray", "brown", "#F562C3", "white", "#527126"];
+//this is an arbitrarily assigned array of colors, proof of concept for color map
+var colorStrings = ["red", "orange", "yellow", "green", "blue", "purple", "black", "gray", "brown", "#F562C3", "white", "#527126"]; //these relate to notes, but eventually we want to be frequency specific
 
 function noteFromPitch( frequency ) {
-	frequency_call_counter ++;
-	frequencyArray.push(frequency);
-	if (frequencyArray.length >49){
-		console.log(frequencyArray);
-		pointInHash = frequency_call_counter / 50;
-		frequency_hash[pointInHash] = frequencyArray;
-		console.log(frequency_hash, pointInHash);
-		frequencyArray = [];
+	frequency_call_counter ++; //keep track of how many frequencies we've taken in
+	frequencyArray.push(frequency); //push the frequency to the frequency array
+	var newNode = document.createElement('div');
+	newNode.id = "songNode" + frequency_call_counter;
+	newNode.setAttribute("class","songNode");
+	newNode.style.width = "10px";
+	newNode.style.height = "10px";
+	newNode.style.backgroundColor = colorStrings[5];
+
+	songTable.appendChild(newNode);
+	if (frequencyArray.length >49){ //if our frequency array is 50 elements long
+		console.log(frequencyArray); //let's console log the array
+		pointInHash = "t" + frequency_call_counter / 50; //let's add a key to our hash
+		frequency_hash[pointInHash] = frequencyArray; //let's add an array to our key
+		console.log(frequency_hash, pointInHash); //let's console log the hash
+		//at the current point in the audio snippet being taken in by the
+		//web audio api
+		$.ajax({ //let's post this data back to our database
+  		type: "POST", //we are posting
+  		url: "http://localhost:3000/songmaps", //this is the url of the page
+  		dataType: 'json', //we want our data to be stored as json
+  		contentType: 'application/json', //this is our data type
+  		data: { time_frequency: JSON.stringify(frequency_hash) }, //make the hash a string
+  		success: function() { alert("Success!"); } //if it works, let us know
+		});
+		frequencyArray = []; //clear out the array, let's give this another shot, boys
   	}
   // Frequency in Hz
-  var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) );
+  var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) ); //isn't math awesome?
+  //12 steps in a scale, hence the 12
+  //take the log of the freqeuncy divided by 400 and multiply that by the log of 2
+  //and you almost get the note! How cool is that?
   return Math.round( noteNum ) + 69;
+  //now let's round it and add 69 and that's the frequency of the note!
 }
 
 function frequencyFromNoteNumber( note ) {
