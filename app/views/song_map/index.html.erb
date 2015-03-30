@@ -428,10 +428,10 @@ function updatePitch( time ) {
     colorContainer = document.getElementById('colorContainer');
     colorContainer.style.backgroundColor = colorStrings[note%12];
     incrementor++;
-     if (incrementor == 36) {
-      console.log(incrementor);
-      incrementor = 0;
-      };
+     // if (incrementor == 50) {
+     //  console.log(incrementor);
+     //  incrementor = 0;
+     //  };
 
     var detune = centsOffFromPitch( pitch, note );
     if (detune == 0 ) {
