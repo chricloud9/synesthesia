@@ -1,9 +1,11 @@
 class AddHstore < ActiveRecord::Migration
   def up
-  	enable_extension :hstore
+  	execute "CREATE EXTENSION hstore" #trying using psql instead
+  	# enable_extension :hstore
   end
 
   def down
-  	disable_extension :hstore
+  	exectute "DROP EXTENSION hstore" #use psql instead of ruby
+  	# disable_extension :hstore
   end
 end
