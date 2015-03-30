@@ -46,6 +46,7 @@ div.vague { color: lightgrey; }
 <script>
   //Put in an incrementor for our frequency sample that we get back.
   var incrementor = 0;
+  var frequencyArray = [];
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35593052-1']);
   _gaq.push(['_trackPageview']);
@@ -189,13 +190,20 @@ function toggleOscillator() {
         window.cancelAnimationFrame( rafID );
         return "play oscillator";
     }
+    //make an oscillating frequency node
     sourceNode = audioContext.createOscillator();
 
     analyser = audioContext.createAnalyser();
-    analyser.fftSize = 2048;
+    //descripe the size of the Fast Fourier Transform
+    //FFT size directly affects frequency resolution
+    analyser.fftSize = 2048; //1024 Spectral Lines (sl = fft/2)
+    //sampling rate / fft size = spectral line frequency
     sourceNode.connect( analyser );
+    //add a node to analyser context
     analyser.connect( audioContext.destination );
+    //destination is
     sourceNode.start(0);
+
     isPlaying = true;
     isLiveInput = false;
     updatePitch();
@@ -207,6 +215,7 @@ function toggleLiveInput() {
     if (isPlaying) {n
         //stop playing and return
         sourceNode.stop( 0 );
+        //
         sourceNode = null;
         analyser = null;
         isPlaying = false;
@@ -266,6 +275,7 @@ var noteStrings = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "
 var colorStrings = ["red", "orange", "yellow", "green", "blue", "purple", "black", "gray", "brown", "#F562C3", "white", "#527126"];
 
 function noteFromPitch( frequency ) {
+  frequencyArray.push(frequency);
   // Frequency in Hz
   console.log(frequency);
   var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) );

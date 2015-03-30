@@ -5388,3 +5388,1094 @@ Started GET "/" for ::1 at 2015-03-28 16:55:33 -0700
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.5ms)
 Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-28 21:42:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (6.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-28 21:42:50 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 66ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2359761855428711752_70364363296660'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (107.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-28 21:55:22 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-28 21:55:25 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2359761855428711752_70364363296660'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (86.3ms)
+
+
+Started POST "/console/repl_sessions/4e5d77c4d6bcb232c7543a26e7b8be0e/trace" for ::1 at 2015-03-28 22:00:04 -0700
+
+
+Started POST "/console/repl_sessions/4e5d77c4d6bcb232c7543a26e7b8be0e/trace" for ::1 at 2015-03-28 22:00:06 -0700
+
+
+Started GET "/song_map" for ::1 at 2015-03-28 22:03:23 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2359761855428711752_70364363296660'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (92.5ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-28 22:03:28 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2359761855428711752_70364363296660'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (38.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-28 23:06:05 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-28 23:06:15 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2359761855428711752_70364363296660'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.4ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-28 23:06:15 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 116ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2359761855428711752_70364363296660'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (41.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (91.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-29 19:38:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (6.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:38:34 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 73ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4531254116909060859_70098248614140'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (75.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (251.4ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:38:35 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4531254116909060859_70098248614140'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (46.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (99.3ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:39:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 74ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2323806624344531263_70175386914620'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (92.5ms)
+
+
+Started GET "/" for ::1 at 2015-03-29 19:40:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 19ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:40:12 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3258857142862881846_70157016417100'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (42.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (212.2ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:40:13 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (couldn't find file 'json'
+  (in /Users/christopherchandler/wdi/week11/day54/synesthesia/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Synesthesia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3258857142862881846_70157016417100'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (46.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (95.4ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:43:25 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/song_map-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/song_map-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-03-29 19:43:25 -0700
+
+
+Started GET "/js/pitchdetect.js" for ::1 at 2015-03-29 19:43:25 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/pitchdetect.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (99.0ms)
+
+
+Started GET "/img/forkme.png" for ::1 at 2015-03-29 19:43:25 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/forkme.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (90.3ms)
+
+
+Started GET "/sounds/whistling3.ogg" for ::1 at 2015-03-29 19:43:25 -0700
+
+ActionController::RoutingError (No route matches [GET] "/sounds/whistling3.ogg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (37.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (83.5ms)
+
+
+Started GET "/assets/song_map-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:43:29 -0700
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-03-29 19:43:29 -0700
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:43:29 -0700
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:44:02 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/song_map-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/song_map-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-03-29 19:44:02 -0700
+
+
+Started GET "/js/pitchdetect.js" for ::1 at 2015-03-29 19:44:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/pitchdetect.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (105.4ms)
+
+
+Started GET "/img/forkme.png" for ::1 at 2015-03-29 19:44:03 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/forkme.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (46.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (12.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (170.7ms)
+
+
+Started GET "/sounds/whistling3.ogg" for ::1 at 2015-03-29 19:44:03 -0700
+
+ActionController::RoutingError (No route matches [GET] "/sounds/whistling3.ogg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (95.5ms)
+
+
+Started GET "/song_map" for ::1 at 2015-03-29 19:47:00 -0700
+Processing by SongMapController#index as HTML
+  Rendered song_map/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/song_map-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/song_map-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-03-29 19:47:00 -0700
+
+
+Started GET "/js/pitchdetect.js" for ::1 at 2015-03-29 19:47:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/pitchdetect.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (99.6ms)
+
+
+Started GET "/img/forkme.png" for ::1 at 2015-03-29 19:47:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/forkme.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.0ms)
+
+
+Started GET "/sounds/whistling3.ogg" for ::1 at 2015-03-29 19:47:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/sounds/whistling3.ogg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/christopherchandler/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (52.2ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/christopherchandler/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (113.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSongMapToUsers (20150330034338)
+  [1m[35m (5.9ms)[0m  BEGIN
+  [1m[36m (25.7ms)[0m  [1mALTER TABLE "users" ADD "frequ" character varying[0m
+  [1m[35mSQL (18.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150330034338"]]
+  [1m[36m (10.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'song_maps'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'song_maps'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'song_maps'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'song_maps'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'song_maps'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (29.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (16.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150326161726)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (27.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150326161726"]]
+  [1m[36m (12.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSongMaps (20150326161744)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (20.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (12.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150326161726)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (14.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150326161726"]]
+  [1m[36m (11.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSongMaps (20150326161744)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE "song_maps" ("id" serial primary key, "time_frequency" hstore, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::UndefinedObject: ERROR:  type "hstore" does not exist
+LINE 1: ..._maps" ("id" serial primary key, "time_frequency" hstore, "c...
+                                                             ^
+: CREATE TABLE "song_maps" ("id" serial primary key, "time_frequency" hstore, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSongMaps (20150326161744)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "song_maps" ("id" serial primary key, "time_frequency" hstore, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::UndefinedObject: ERROR:  type "hstore" does not exist
+LINE 1: ..._maps" ("id" serial primary key, "time_frequency" hstore, "c...
+                                                             ^
+: CREATE TABLE "song_maps" ("id" serial primary key, "time_frequency" hstore, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSongMaps (20150326161744)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (12.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150326161744"]]
+  [1m[35m (6.0ms)[0m  COMMIT
+Migrating to AddSongMapToUsers (20150330034338)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSongMapToUsers (20150330034338)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSongMapToUsers (20150330034338)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSongMapToUsers (20150330034338)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSongMapToUsers (20150330034338)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSongMapToUsers (20150330034338)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "song_map" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150330034338"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
