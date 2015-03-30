@@ -40,7 +40,6 @@ div.vague { color: lightgrey; }
 <!-- just used for debugging
 <canvas id="waveform" width="512" height="256"></canvas>
 -->
-<a href="https://github.com/cwilso/pitchdetect" style="position: absolute; z-index:2; top: 0; right: 0; border: 0;"><img src="img/forkme.png" alt="Fork me on GitHub"></a>
 </body>
 
 <script>
@@ -275,9 +274,12 @@ var noteStrings = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "
 var colorStrings = ["red", "orange", "yellow", "green", "blue", "purple", "black", "gray", "brown", "#F562C3", "white", "#527126"];
 
 function noteFromPitch( frequency ) {
-  frequencyArray.push(frequency);
+	frequencyArray.push(frequency);
+	if (frequencyArray.length >49){
+		console.log(frequencyArray);
+		frequencyArray = [];
+  	}
   // Frequency in Hz
-  console.log(frequency);
   var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) );
   return Math.round( noteNum ) + 69;
 }
