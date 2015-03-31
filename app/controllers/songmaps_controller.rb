@@ -10,8 +10,11 @@ class SongmapsController < ApplicationController
 	end
 
 	def create
-		@songmap = Songmap.create(songmap_params)
-		
+		lame_ass = songmap_params
+		lame_ass[:time_frequency] = {parmams: songmap_params[:time_frequency]}
+		@songmap = Songmap.create(lame_ass)
+
+		# puts params.inspect
 		respond_to do |format|
 			format.html
 			format.json { render json: @songmap}
@@ -25,7 +28,7 @@ class SongmapsController < ApplicationController
 		end
 
 		def songmap_params
-			params.require(:songmap).permit(:name,:time_frequency => [])
+			params.require(:songmap).permit(:name,time_frequency: [])
 		end
 end
 

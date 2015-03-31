@@ -311,8 +311,8 @@ function noteFromPitch( frequency ) {
   		dataType: "json", //we want our data to be stored as json
   		contentType: "application/json", //this is our data type
   		data : JSON.stringify({
-                 songmap: {  name: "a",
-                             time_frequency:[1,2]
+                 songmap: {  name: pointInHash.toString(),
+                             time_frequency:frequencyArray
 
                  }
         }),
