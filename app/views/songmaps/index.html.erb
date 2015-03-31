@@ -46,19 +46,9 @@ div.vague { color: lightgrey; }
 </body>
 
 <script>
-  //Put in an incrementor for our frequency sample that we get back.
-  var incrementor = 0;
-  var frequencyArray = [];
-  var songTable = document.getElementById('songMap')
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35593052-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  var incrementor = 0;//Put in an incrementor for our frequency sample that we get back.
+  var frequencyArray = []; //This is where we will store our frequencies
+  var songTable = document.getElementById('songMap') //access the songmap div
 
   /*
 The MIT License (MIT)
@@ -84,11 +74,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
+window.AudioContext = window.AudioContext || window.webkitAudioContext; //assign an web audio api audio 
+//context to this window
 
-var audioContext = null;
-var isPlaying = false;
-var sourceNode = null;
+var audioContext = null; //set an audio context globally so we can access it everywhere
+var isPlaying = false; //we will change this later, but declare this variable
+var sourceNode = null; //create a sourcenodev ar
 var analyser = null;
 var theBuffer = null;
 var DEBUGCANVAS = null;
@@ -105,10 +96,11 @@ var detectorElem,
   var pointInHash; //this will be the key for the array in the hash above
 
 window.onload = function() {
-  audioContext = new AudioContext();
+  audioContext = new AudioContext(); //create a new audio context
   MAX_SIZE = Math.max(4,Math.floor(audioContext.sampleRate/5000));  // corresponds to a 5kHz signal
-  var request = new XMLHttpRequest();
-  request.open("GET", "../sounds/whistling3.ogg", true);
+  var request = new XMLHttpRequest(); //this is getting a whistiling sound for the oscillator
+  //and feeds it into the frequency getter
+  request.open("GET", "../sounds/whistling3.ogg", true); //open a request to the server
   request.responseType = "arraybuffer";
   request.onload = function() {
     audioContext.decodeAudioData( request.response, function(buffer) { 
@@ -239,7 +231,7 @@ function toggleLiveInput() {
                     "googHighpassFilter": "false"
                 },
                 "optional": []
-            },
+            }
         }, gotStream);
 }
 
@@ -289,9 +281,23 @@ function noteFromPitch( frequency ) {
 	newNode.setAttribute("class","songNode");
 	newNode.style.width = "10px";
 	newNode.style.height = "10px";
-	newNode.style.backgroundColor = colorStrings[5];
+	var margTop=0, margLeft = 0;
+	margTop = Math.floor(frequency_call_counter/100) * 10; //if we had 100, our margin top would be 10
+
+	margLeft = (10*frequency_call_counter)%1000;
+
+
+	(Math.ceil(frequency_call_counter/100) * 10) - frequency_call_counter; // since divs have a width of 10
+	//our margin left will be 10 * the number of divs we have so far.
+	nodeTopMarg = margTop.toString();
+	margg = margTop.toString()+"px " + "0px " + "0px " + margLeft.toString() + "px"; //make this readable
+	//by the margine style
+	newNode.style.position = "absolute"; //don't let the divs affect each other
+	newNode.style.margin = margg;
+	newNode.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 
 	songTable.appendChild(newNode);
+    console.log("frequencyArray length is : " + frequencyArray.length);
 	if (frequencyArray.length >49){ //if our frequency array is 50 elements long
 		console.log(frequencyArray); //let's console log the array
 		pointInHash = "t" + frequency_call_counter / 50; //let's add a key to our hash
@@ -299,16 +305,30 @@ function noteFromPitch( frequency ) {
 		console.log(frequency_hash, pointInHash); //let's console log the hash
 		//at the current point in the audio snippet being taken in by the
 		//web audio api
-		$.ajax({ //let's post this data back to our database
+	 $.ajax({ //let's post this data back to our database
   		type: "POST", //we are posting
-  		url: "http://localhost:3000/songmaps", //this is the url of the page
-  		dataType: 'json', //we want our data to be stored as json
-  		contentType: 'application/json', //this is our data type
-  		data: { time_frequency: JSON.stringify(frequency_hash) }, //make the hash a string
-  		success: function() { alert("Success!"); } //if it works, let us know
+  		url: "/songmaps", //this is the url of the page
+  		dataType: "json", //we want our data to be stored as json
+  		contentType: "application/json", //this is our data type
+  		data : JSON.stringify({
+                 songmap: {  name: "a",
+                             time_frequency:[1,2]
+
+                 }
+        }),
+  		//success: function() { alert("Success!"); },
+  		error: function(err){ console.log(err)}
 		});
-		frequencyArray = []; //clear out the array, let's give this another shot, boys
+		/*frequencyCall.done(function(msg){
+			console.log(msg);
+		});
+		frequencyCall.fail(function(jqXHR, textStatus){
+			console.log( "Request failed: " + textStatus);
+		});*/
+      frequencyArray = [];
   	}
+  	//frequencyCall();
+  	 //clear out the array, let's give this another shot, boys
   // Frequency in Hz
   var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) ); //isn't math awesome?
   //12 steps in a scale, hence the 12
@@ -316,7 +336,7 @@ function noteFromPitch( frequency ) {
   //and you almost get the note! How cool is that?
   return Math.round( noteNum ) + 69;
   //now let's round it and add 69 and that's the frequency of the note!
-}
+};
 
 function frequencyFromNoteNumber( note ) {
   return 440 * Math.pow(2,(note-69)/12);
@@ -450,42 +470,45 @@ function updatePitch( time ) {
   }
 
   if (ac == -1) {
-    detectorElem.className = "vague";
-    pitchElem.innerText = "--";
-    noteElem.innerText = "-";
-    detuneElem.className = "";
-    detuneAmount.innerText = "--";
-  } else {
-    detectorElem.className = "confident";
-    pitch = ac;
-    pitchElem.innerText = Math.round( pitch ) ;
-    var note =  noteFromPitch( pitch );
-    noteElem.innerHTML = noteStrings[note%12];
-    colorContainer = document.getElementById('colorContainer');
-    colorContainer.style.backgroundColor = colorStrings[note%12];
-    incrementor++;
-     // if (incrementor == 50) {
-     //  console.log(incrementor);
-     //  incrementor = 0;
-     //  };
-
-    var detune = centsOffFromPitch( pitch, note );
-    if (detune == 0 ) {
+      detectorElem.className = "vague";
+      pitchElem.innerText = "--";
+      noteElem.innerText = "-";
       detuneElem.className = "";
-      detuneAmount.innerHTML = "--";
-    } else {
-      if (detune < 0)
-        detuneElem.className = "flat";
-      else
-        detuneElem.className = "sharp";
-      detuneAmount.innerHTML = Math.abs( detune );
-    }
+      detuneAmount.innerText = "--";
+  }
+  else {
+      detectorElem.className = "confident";
+      pitch = ac;
+      pitchElem.innerText = Math.round(pitch);
+      var note = noteFromPitch(pitch);
+      noteElem.innerHTML = noteStrings[note % 12];
+      colorContainer = document.getElementById('colorContainer');
+      colorContainer.style.backgroundColor = colorStrings[note % 12];
+      incrementor++;
+      // if (incrementor == 50) {
+      //  console.log(incrementor);
+      //  incrementor = 0;
+      //  };
+
+      var detune = centsOffFromPitch(pitch, note);
+      if (detune == 0) {
+          detuneElem.className = "";
+          detuneAmount.innerHTML = "--";
+      } else {
+          if (detune < 0)
+              detuneElem.className = "flat";
+          else
+              detuneElem.className = "sharp";
+
+          detuneAmount.innerHTML = Math.abs(detune);
+      }
   }
 
   if (!window.requestAnimationFrame)
     window.requestAnimationFrame = window.webkitRequestAnimationFrame;
+
   rafID = window.requestAnimationFrame( updatePitch );
 }
 </script>
-</body>
+
 </html>
