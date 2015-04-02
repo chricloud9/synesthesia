@@ -1,0 +1,138 @@
+<html>
+<head>
+<style> body {
+    background: #000;
+}
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+h1{
+    color:white;
+
+}
+h2{
+    color: #ffffff;
+
+}
+#nav{
+    border: 1px solid white;
+    width: 200px;
+    height:600px;
+}
+</style>
+
+</head>
+<body>
+<script>var Hex = function() {
+    this.init.apply(this, arguments);
+};
+Hex.prototype = {
+    init: function(q, r) {
+        this.q = q || 0;
+        this.r = r || 0;
+        this.s = - this.q - this.r;
+        this.mag = Math.sqrt(this.q * this.q + this.r * this.r + this.s * this.s);
+    },
+    projection: function(cx, cy, unitsize, angle) {
+        cx = cx || 0;
+        cy = cy || 0;
+        unitsize = unitsize || 10;
+        angle = angle || 0;
+
+        var x = unitsize * Math.sqrt(3) * (this.q + this.r / 2),
+                y = unitsize * 3 / 2 * this.r;
+        // rotate & translate x, y
+        this.x = x * Math.cos(angle) - y * Math.sin(angle) + cx;
+        this.y = y * Math.cos(angle) + x * Math.sin(angle) + cy;
+    },
+    getNeighbor: function(direction) {
+        direction = ~~direction % 6;
+        var neighbors = [[1, 0], [1, -1], [0, -1], [-1, 0], [-1, 1], [0, 1]];
+        return new Hex(this.q + neighbors[direction][0], this.r + neighbors[direction][1]);
+    }
+};
+
+var HexGrid = function() {
+    this.init.apply(this, arguments);
+};
+HexGrid.prototype = {
+    init: function(radius) {
+        radius = radius || 0;
+        this.make(radius);
+    },
+    make: function(radius) {
+        this.points = [];
+        function getHexRing(radius) {
+            var res = [],
+                    hex = new Hex(-radius, radius);
+            if (radius === 0) {
+                res.push(hex);
+            } else {
+                for (var i = 0; i < 6; i++) {
+                    for (var j = 0; j < radius; j++) {
+                        res.push(hex);
+                        hex = hex.getNeighbor(i);
+                    }
+                }
+            }
+            return res;
+        }
+        for (var i = 0; i < radius; i++) {
+            Array.prototype.push.apply(this.points, getHexRing(i));
+        }
+    },
+    projection: function(cx, cy, unitsize, angle) {
+        for (var i = 0; i < this.points.length; i++) {
+            this.points[i].projection(cx, cy, unitsize, angle);
+        }
+    }
+};
+
+window.addEventListener('load', function() {
+    var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d'),
+            w = innerWidth,
+            h = innerHeight,
+            radius = 10,
+            unitsize = h / radius / 4,
+            hexGrid = new HexGrid(radius),
+            theta = 0,
+            seed = Math.random();
+
+    canvas.width = w;
+    canvas.height = h;
+    hexGrid.projection(w/2, h/2, unitsize, 0);
+
+    function animate() {
+        ctx.clearRect(0, 0, w, h);
+        for (var i = 0; i < hexGrid.points.length; i++) {
+            var hex = hexGrid.points[i],
+                    r = Math.abs(
+                            Math.cos(12 * Math.PI * theta + hex.mag / radius * theta * seed * 500 * Math.sin(2 * Math.PI * theta))
+                    );
+            ctx.beginPath();
+            ctx.arc(hex.x, hex.y, unitsize * Math.sqrt(3) * r, 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.strokeStyle = 'rgba(' + ~~(255 * (1 - r)) +  ',' + ~~(127 * r) + ',' + ~~(255 * r) + ',' + (1 -r * 0.5) + ')';
+            ctx.stroke();
+
+        }
+        theta += 0.0002;
+        if (theta >= 1) {
+            theta = 0;
+            seed = Math.random();
+        }
+        requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+}, false);</script>
+<!--<div id="nav">-->
+    <!--<h1>Synesthesia</h1>-->
+    <!--<h2>Enter The Void</h2>-->
+<!--</div>-->
+<canvas id='canvas'></canvas>
+</body>
+
+</html>
