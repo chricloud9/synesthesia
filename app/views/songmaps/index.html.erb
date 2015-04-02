@@ -91,9 +91,11 @@ var detectorElem,
   noteElem,
   detuneElem,
   detuneAmount;
+  var allFrequencies = [];
   var frequency_call_counter = 0; //count every time we update frequency
   var frequency_hash = {}; //we will add an array to this hash
   var pointInHash; //this will be the key for the array in the hash above
+  var pitchArray = []; //Are pitches different from frequencies? THey shouldn't be
 
 window.onload = function() {
   audioContext = new AudioContext(); //create a new audio context
@@ -109,7 +111,7 @@ window.onload = function() {
   }
   request.send();
 
-  detectorElem = document.getElementById( "detector" );
+  detectorElem = document.getElementById( "detector" ); //simple DOM manipulation
   canvasElem = document.getElementById( "output" );
   DEBUGCANVAS = document.getElementById( "waveform" );
   if (DEBUGCANVAS) {
@@ -147,6 +149,17 @@ window.onload = function() {
 
 
 
+}
+
+function pitchToHSL(pitchVal){
+    if(pitchVal > 6000 || pitchVal < 200){ // pitches out of this range are resonant noise
+        return "badpitch";
+    }
+    else
+        return "hsl"+"(" + ((pitchVal - 200) / 16.11111111) +",100%,50%)" ; //H in HSL values 0 through 320 (cutting out the reds on the end)
+        // Pitch Range we care about is 200 - 6000
+        // 5800/360 = 16.1 repeating
+        //"hsl(2,50%,50%)"
 }
 
 function error() {
@@ -243,7 +256,7 @@ function togglePlayback() {
         analyser = null;
         isPlaying = false;
     if (!window.cancelAnimationFrame)
-      window.cancelAnimationFrame = window.webkitCancelAnimationFrame;
+      window.cancelAnimationFrame = window.webkitCancelAnimationFrame; 
         window.cancelAnimationFrame( rafID );
         return "start";
     }
@@ -274,30 +287,34 @@ var noteStrings = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "
 var colorStrings = ["red", "orange", "yellow", "green", "blue", "purple", "black", "gray", "brown", "#F562C3", "white", "#527126"]; //these relate to notes, but eventually we want to be frequency specific
 
 function noteFromPitch( frequency ) {
-	frequency_call_counter ++; //keep track of how many frequencies we've taken in
-	frequencyArray.push(frequency); //push the frequency to the frequency array
-	var newNode = document.createElement('div');
-	newNode.id = "songNode" + frequency_call_counter;
-	newNode.setAttribute("class","songNode");
-	newNode.style.width = "10px";
-	newNode.style.height = "10px";
-	var margTop=0, margLeft = 0;
-	margTop = Math.floor(frequency_call_counter/100) * 10; //if we had 100, our margin top would be 10
+    if(pitchToHSL(frequency) != "badpitch")
+    {
+        frequency_call_counter++; //keep track of how many frequencies we've taken in
+        allFrequencies.push(frequency); //Keep track of everything in one place
+        frequencyArray.push(frequency); //push the frequency to the frequency array
+        var newNode = document.createElement('div');
+        newNode.id = "songNode" + frequency_call_counter;
+        newNode.setAttribute("class", "songNode");
+        newNode.style.width = "10px";
+        newNode.style.height = "10px";
+        var margTop = 0, margLeft = 0;
+        margTop = Math.floor(frequency_call_counter / 100) * 10; //if we had 100, our margin top would be 10
 
-	margLeft = (10*frequency_call_counter)%1000;
+        margLeft = (10 * frequency_call_counter) % 1000;
 
 
-	(Math.ceil(frequency_call_counter/100) * 10) - frequency_call_counter; // since divs have a width of 10
-	//our margin left will be 10 * the number of divs we have so far.
-	nodeTopMarg = margTop.toString();
-	margg = margTop.toString()+"px " + "0px " + "0px " + margLeft.toString() + "px"; //make this readable
-	//by the margine style
-	newNode.style.position = "absolute"; //don't let the divs affect each other
-	newNode.style.margin = margg;
-	newNode.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        (Math.ceil(frequency_call_counter / 100) * 10) - frequency_call_counter; // since divs have a width of 10
+        //our margin left will be 10 * the number of divs we have so far.
+        nodeTopMarg = margTop.toString();
+        margg = margTop.toString() + "px " + "0px " + "0px " + margLeft.toString() + "px"; //make this readable
+        //by the margine style
+        newNode.style.position = "absolute"; //don't let the divs affect each other
+        newNode.style.margin = margg;
+        newNode.style.backgroundColor = pitchToHSL(frequency);
 
-	songTable.appendChild(newNode);
-    console.log("frequencyArray length is : " + frequencyArray.length);
+        songTable.appendChild(newNode);
+    };
+
 	if (frequencyArray.length >49){ //if our frequency array is 50 elements long
 		console.log(frequencyArray); //let's console log the array
 		pointInHash = "t" + frequency_call_counter / 50; //let's add a key to our hash
@@ -384,7 +401,7 @@ function autoCorrelateFloat( buf, sampleRate ) {
 
 var MIN_SAMPLES = 0;  // will be initialized when AudioContext is created.
 
-function autoCorrelate( buf, sampleRate ) {
+function autoCorrelate( buf, sampleRate ) { //this function is constantly being called
   var SIZE = buf.length;
   var MAX_SAMPLES = Math.floor(SIZE/2);
   var best_offset = -1;
@@ -394,6 +411,7 @@ function autoCorrelate( buf, sampleRate ) {
   var correlations = new Array(MAX_SAMPLES);
 
   for (var i=0;i<SIZE;i++) {
+    // console.log("here's buf and buf[i] and rms", buf, val, rms)
     var val = buf[i];
     rms += val*val;
   }
@@ -479,6 +497,7 @@ function updatePitch( time ) {
   else {
       detectorElem.className = "confident";
       pitch = ac;
+      pitchArray.push(pitch);
       pitchElem.innerText = Math.round(pitch);
       var note = noteFromPitch(pitch);
       noteElem.innerHTML = noteStrings[note % 12];

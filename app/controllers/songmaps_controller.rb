@@ -12,7 +12,7 @@ class SongmapsController < ApplicationController
 	def create
 		paramholder = songmap_params
 		paramholder[:time_frequency] = {params: songmap_params[:time_frequency]}
-		@songmap = Songmap.create(lame_ass)
+		@songmap = Songmap.create(paramholder)
 
 		# puts params.inspect
 		respond_to do |format|
