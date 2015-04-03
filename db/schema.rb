@@ -11,23 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330071456) do
+ActiveRecord::Schema.define(version: 20150403170355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
-
-  create_table "song_maps", force: :cascade do |t|
-    t.string "name"
-    t.hstore "time_frequency"
-  end
 
   create_table "songmaps", force: :cascade do |t|
+    t.string   "frequencyson"
+    t.integer  "user_id"
     t.string   "name"
-    t.hstore   "time_frequency"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
+
+  add_index "songmaps", ["user_id"], name: "index_songmaps_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -35,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150330071456) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "song_map"
   end
 
+  add_foreign_key "songmaps", "users"
 end

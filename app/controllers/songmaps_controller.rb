@@ -11,7 +11,7 @@ class SongmapsController < ApplicationController
 
 	def create
 		paramholder = songmap_params
-		paramholder[:time_frequency] = {params: songmap_params[:time_frequency]}
+		# paramholder[:time_frequency] = {params: songmap_params[:time_frequency]}
 		@songmap = Songmap.create(paramholder)
 
 		# puts params.inspect
@@ -28,7 +28,7 @@ class SongmapsController < ApplicationController
 		end
 
 		def songmap_params
-			params.require(:songmap).permit(:name,time_frequency: [])
+			params.require(:songmap).permit(:name,:frequencyson)
 		end
 end
 

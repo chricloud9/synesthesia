@@ -23,6 +23,6 @@ module Synesthesia
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     #change schema dump format from ruby to sql as the schema for hstore can't be represented by ruby
-    config.active_record.schema_format = :sql
+    # config.active_record.schema_format = :sql
   end
 end
